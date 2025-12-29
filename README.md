@@ -29,6 +29,12 @@ Automated management of scene files, including:
 ---
 ## Installation
 
+Add this repository to your sources in whisparr. Configure from toml or GUI. 
+
+
+
+Manual Installation:
+
 1. Copy `whisparr-sync.py` and `whisparr-sync.yml` into your Stash plugins directory.  
 2. Install the required Python dependency:
 
