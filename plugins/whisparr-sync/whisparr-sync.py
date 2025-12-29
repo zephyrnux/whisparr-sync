@@ -673,7 +673,7 @@ def preprocessor(dev: bool):
         stash_log.info("\n\n***DEV_MODE***\n\n")
         toml_path = "../../dev.toml"
     else:
-        toml_path = "/root/.stash/plugins/whisparr-bridge/config.toml"
+        toml_path = "/root/.stash/plugins/whisparr-sync/config.toml"
     STASH_DATA = {}
     if not dev:
         try:

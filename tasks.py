@@ -1,7 +1,7 @@
 from invoke import task
 import sys
 from pathlib import Path
-SOURCE_DIRS = ["plugins/whisparr-bridge", "tests"]
+SOURCE_DIRS = ["plugins/whisparr-sync", "tests"]
 
 # Simple color helpers
 def color(text, code):
@@ -55,7 +55,7 @@ def typecheck(c):
 @task
 def test(c):
     """Run tests with coverage."""
-    run_cmd(c, "pytest --cov=whisparr_bridge tests")
+    run_cmd(c, "pytest --cov=whisparr_sync tests")
     print(green("✅ Tests completed successfully"))
 
 @task(help={"fix": "Automatically format code before running other dev tasks."})
@@ -82,7 +82,7 @@ def export_reqs(c):
         c.run("poetry self add poetry-plugin-export")
 
     # Create requirements directory
-    requirements_dir = Path("plugins/whisparr-bridge")
+    requirements_dir = Path("plugins/whisparr-sync")
     requirements_dir.mkdir(parents=True, exist_ok=True)
 
     main_reqs = requirements_dir / "requirements.txt"

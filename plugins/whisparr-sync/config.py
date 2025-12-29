@@ -118,7 +118,7 @@ def load_plugin_config(
         stash_api = StashInterface(stash["server_connection"])
         try:
             stash_config = stash_api.get_configuration()
-            plugin_cfg = stash_config.get("plugins", {}).get("whisparr-bridge", {})
+            plugin_cfg = stash_config.get("plugins", {}).get("whisparr-sync", {})
             stash_log.debug(f"SettingsFromUI: {plugin_cfg}")
             merged.update(plugin_cfg)
         except Exception as e:
@@ -224,7 +224,7 @@ def setup_logger(config, default_scene_id: int = 0) -> logging.Logger:
 
     # Determine log file path
     if config.LOG_FILE_ENABLE:
-        log_file_path = config.LOG_FILE_LOCATION / "WhisparrBridge.log"
+        log_file_path = config.LOG_FILE_LOCATION / "Whisparrsync.log"
         log_file_path.parent.mkdir(parents=True, exist_ok=True)
         file_handler = logging.FileHandler(log_file_path, encoding="utf-8")
         file_formatter = ColoredFormatter(

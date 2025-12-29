@@ -1,7 +1,7 @@
 [project]
-name = "whisparr-bridge"
+name = "whisparr-sync"
 version = "1.0.0"
-description = "A stash plugin bridge to Whisparr v3 (eros)"
+description = "A stash plugin sync to Whisparr v3 (eros)"
 authors = [
     {name = "Your Name",email = "you@example.com"}
 ]

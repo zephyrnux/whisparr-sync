@@ -1,6 +1,6 @@
-# Whisparr Bridge
+# Whisparr Sync
 
-Whisparr Bridge is a [Stash](https://stashapp.cc/) plugin that syncs scenes into [Whisparr](https://github.com/Whisparr/Whisparr/) when they have a StashDB link. 
+Whisparr Sync is a [Stash](https://stashapp.cc/) plugin that syncs scenes into [Whisparr](https://github.com/Whisparr/Whisparr/) when they have a StashDB link. 
 
 Automated management of scene files, including:
 
@@ -29,7 +29,7 @@ Automated management of scene files, including:
 ---
 ## Installation
 
-1. Copy `whisparr-bridge.py` and `whisparr-bridge.yml` into your Stash plugins directory.  
+1. Copy `whisparr-sync.py` and `whisparr-sync.yml` into your Stash plugins directory.  
 2. Install the required Python dependency:
 
    ```bash
@@ -147,7 +147,7 @@ flowchart TD
 ---
 ## Exceptions
 
-Custom exceptions used in the bridge:
+Custom exceptions used in the sync:
 
 - `WhisparrError` – General Whisparr-related error
 - `SceneNotFoundError` – Raised when a scene is missing in Whisparr
